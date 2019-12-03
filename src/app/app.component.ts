@@ -75,7 +75,7 @@ export class CdkDragDropNestedListsExample implements OnInit {
   private canBeDropped(event: CdkDragDrop<Task, Task>): boolean {
     const movingItem: Task = event.item.data;
 
-    return event.previousContainer.id === event.container.id
+    return event.previousContainer.id !== event.container.id
       && this.isNotSelfDrop(event)
       && !this.hasChild(movingItem, event.container.data);
   }
