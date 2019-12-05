@@ -16,7 +16,52 @@ export class CdkDragDropNestedListsExample implements OnInit {
 
   parentItem: Task = {
 	"taskName": "",
-	"taskID": "59397bad-5453-4da7-8000-fd7b75f58eed",
+	"taskID": 1211,
+  "rsrcCount": 6,
+  "startDate": "10/25/2018",
+  "origDueMS": 1540969200000,
+  "origDoneMS": "0",
+  "parentMileStones": "",
+  "isOverBooked": true,
+  "assignedTo": [],
+  "hasCharges": false,
+  "isCollapsed": false,
+  "numOfRoles": 2,
+  "taskCode": "",
+  "doneMS": "0",
+  "taskNum": 1,
+  "dependency": "",
+  "doneDate": "",
+  "numOfItems": 2,
+  "showChildTask": true,
+  "canWrite": true,
+  "taskStatusColor": "#ffff00",
+  "dueMS": 1540969200000,
+  "taskAgenda": "",
+  "dueDate": "10/31/2018",
+  "startMS": 1540450800000,
+  "hasStartAndDueDates": true,
+  "origStartMS": 1540450800000,
+  "isTaskVisible": true,
+  "taskWorkflowStatus": "",
+  "taskPriorityColor": "#14ff00",
+  "isMileStone": false,
+  "numOfBlogs": 0,
+  "BHMPH_Task": true,
+  "isTrigger": false,
+  "issueID": 0,
+  "taskPriority": 5,
+  "taskStatusName": "CCCC",
+  "isLocked": false,
+  "hasCustomForm": false,
+  "isDone": false,
+  "daartID": 0,
+  "duration": 5,
+  "indentLevel": 0,
+  "taskStatus": "C",
+  "totalHrs": 120,
+  "hasChild": false,
+  "hasNote": false,
 	"tasks": [{
 		"rsrcCount": 6,
 		"startDate": "10/25/2018",
@@ -805,7 +850,6 @@ export class CdkDragDropNestedListsExample implements OnInit {
 }
 
   constructor() {
-    // this.parentItem = new Item({ name: 'parent-item' });
   }
 
   public ngOnInit() {

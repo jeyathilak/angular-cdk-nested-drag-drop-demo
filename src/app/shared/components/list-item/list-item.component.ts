@@ -14,7 +14,7 @@ export class ListItemComponent {
     this.allDropListsIds = ids;
   }
   public get connectedDropListsIds(): string[] {
-    return this.allDropListsIds.filter((id) => id !== this.item.taskID);
+    return this.allDropListsIds.filter((id) => id !== this.item.taskID.toString());
   }
   public allDropListsIds: string[];
 
@@ -23,7 +23,7 @@ export class ListItemComponent {
   }
 
   public get parentItemId(): string {
-    return this.dragDisabled ? '' : this.parentItem.taskID;
+    return this.dragDisabled ? '' : this.parentItem.taskID.toString();
   }
 
 
