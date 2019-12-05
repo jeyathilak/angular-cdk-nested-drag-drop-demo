@@ -28,12 +28,27 @@
         [cdkDropListConnectedTo]="connectedDropListsIds"
         [cdkDropListData]="item"
         (cdkDropListDropped)="onDragDrop($event)">
-        <div class="li" *ngFor="let subItem of item.tasks">
-            <list-item [item]="subItem"
+        <div class="pm-task-table-row box li" *ngFor="let task of item.tasks">
+            <list-item [item]="task"
                 [parentItem]="item"
                 [connectedDropListsIds]="allDropListsIds"
                 (itemDrop)="onDragDrop($event)">
             </list-item>
+            <div class="pm-task-table-cell task-duration">
+            {{ task.duration }}
+            </div>
+            <div class="pm-task-table-cell task-dependency">
+            {{ task.dependency }}
+            </div>
+            <div class="pm-task-table-cell task-startdate">
+            {{ task.startDate }}
+            </div>
+            <div class="pm-task-table-cell task-duedate">
+            {{ task.dueDate }}
+            </div>
+            <div class="pm-task-table-cell task-donedate">
+            {{ task.doneDate }}
+            </div>
         </div>
     </div>
 </div>
