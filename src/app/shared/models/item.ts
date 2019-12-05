@@ -2,7 +2,7 @@ export interface Task {
     rsrcCount: number;
     startDate: string;
     origDueMS: number;
-    origDoneMS: number;
+    origDoneMS: string;
     parentMileStones: string;
     isOverBooked: boolean;
     hasCharges: boolean;
@@ -24,7 +24,7 @@ export interface Task {
     dueDate: string;
     startMS: number;
     hasStartAndDueDates: boolean;
-    origStartMS: string;
+    origStartMS: number;
     isTaskVisible: boolean;
     taskWorkflowStatus: string;
     taskPriorityColor: string;
