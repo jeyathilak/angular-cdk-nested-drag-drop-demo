@@ -872,7 +872,7 @@ export class CdkDragDropNestedListsExample implements OnInit {
   }
 
   private getIdsRecursive(item: Task): string[] {
-    let ids = [item.taskID];
+    let ids = [item.taskID.toString()];
     item.tasks.forEach((childItem) => { ids = ids.concat(this.getIdsRecursive(childItem)) });
     return ids;
   }
