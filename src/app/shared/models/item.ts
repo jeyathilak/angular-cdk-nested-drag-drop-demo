@@ -2,7 +2,7 @@ export interface Task {
     rsrcCount: number;
     startDate: string;
     origDueMS: number;
-    origDoneMS: string;
+    origDoneMS: any;
     parentMileStones: string;
     isOverBooked: boolean;
     hasCharges: boolean;
@@ -10,7 +10,7 @@ export interface Task {
     numOfRoles: number;
     taskCode: string;
     taskName: string;
-    doneMS: string;
+    doneMS: any;
     taskNum: number;
     taskID: number;
     dependency: string;
@@ -19,7 +19,7 @@ export interface Task {
     showChildTask: boolean;
     canWrite: boolean;
     taskStatusColor: string;
-    dueMS: number;
+    dueMS: any;
     taskAgenda: string;
     dueDate: string;
     startMS: number;
@@ -45,7 +45,7 @@ export interface Task {
     totalHrs: number;
     hasChild: boolean;
     hasNote: boolean;
-    assignedTo: [];
+    assignedTo: any;
     tasks: Task[];
 
 }
