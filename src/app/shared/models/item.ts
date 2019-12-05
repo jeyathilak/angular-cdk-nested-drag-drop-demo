@@ -10,10 +10,10 @@ export interface Task {
     numOfRoles: number;
     taskCode: string;
     taskName: string;
-    doneMS: number;
+    doneMS: string;
     taskNum: number;
     taskID: number;
-    dependency: number;
+    dependency: string;
     doneDate: string;
     numOfItems: number;
     showChildTask: boolean;
@@ -24,7 +24,7 @@ export interface Task {
     dueDate: string;
     startMS: number;
     hasStartAndDueDates: boolean;
-    origStartMS: number;
+    origStartMS: string;
     isTaskVisible: boolean;
     taskWorkflowStatus: string;
     taskPriorityColor: string;
