@@ -34,8 +34,7 @@
                 [parentItem]="item"
                 [connectedDropListsIds]="allDropListsIds"
                 (itemDrop)="onDragDrop($event)">
-            </list-item>
-            <div class="pm-task-table-cell task-duration">
+                <div class="pm-task-table-cell task-duration">
             {{ task.duration }}
             </div>
             <div class="pm-task-table-cell task-dependency">
@@ -50,6 +49,7 @@
             <div class="pm-task-table-cell task-donedate">
             {{ task.doneDate }}
             </div>
+            </list-item>
         </div>
     </div>
 </div>
