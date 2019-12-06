@@ -1,10 +1,11 @@
 <div cdkDropList
-    class="item-dropzone parent"
+    class="item-dropzone parent pm-task-table-body"
     [id]="parentItemId"
     [cdkDropListData]="parentItem"
     [cdkDropListConnectedTo]="allDropListsIds"
     (cdkDropListDropped)="onDragDrop($event)">
     <div cdkDrag
+        class="pm-task-table-row box li"
         [id]="item.taskID"
         [cdkDragData]="item"
         [cdkDragDisabled]="dragDisabled">
