@@ -1,11 +1,11 @@
 <div cdkDropList
-    class="item-dropzone parent pm-task-table-body"
+    class="item-dropzone parent"
     [id]="parentItemId"
     [cdkDropListData]="parentItem"
     [cdkDropListConnectedTo]="allDropListsIds"
     (cdkDropListDropped)="onDragDrop($event)">
     <div cdkDrag
-        class="pm-task-table-row box li"
+        class="li"
         [id]="item.taskID"
         [cdkDragData]="item"
         [cdkDragDisabled]="dragDisabled">
@@ -23,33 +23,33 @@
             {{item.taskName}} with {{item.tasks.length}} task(s)
         </div>
     </div>
-    <div cdkDropList 
-        class="item-dropzone ul pm-task-table-body"
-        [id]="item.taskID"
+    <ul cdkDropList
+        class="item-dropzone"
+        [id]="item.uId"
         [cdkDropListConnectedTo]="connectedDropListsIds"
         [cdkDropListData]="item"
         (cdkDropListDropped)="onDragDrop($event)">
-        <div class="pm-task-table-row box li" *ngFor="let task of item.tasks">
+        <li *ngFor="let task of item.tasks">
             <list-item [item]="task"
                 [parentItem]="item"
                 [connectedDropListsIds]="allDropListsIds"
                 (itemDrop)="onDragDrop($event)">
-                <div class="pm-task-table-cell task-duration">
-            {{ task.duration }}
-            </div>
-            <div class="pm-task-table-cell task-dependency">
-            {{ task.dependency }}
-            </div>
-            <div class="pm-task-table-cell task-startdate">
-            {{ task.startDate }}
-            </div>
-            <div class="pm-task-table-cell task-duedate">
-            {{ task.dueDate }}
-            </div>
-            <div class="pm-task-table-cell task-donedate">
-            {{ task.doneDate }}
-            </div>
             </list-item>
-        </div>
-    </div>
+            <div class="pm-task-table-cell task-duration">
+                  {{ task.duration }}
+                </div>
+                <div class="pm-task-table-cell task-dependency">
+                  {{ task.dependency }}
+                </div>
+                <div class="pm-task-table-cell task-startdate">
+                  {{ task.startDate }}
+                </div>
+                <div class="pm-task-table-cell task-duedate">
+                  {{ task.dueDate }}
+                </div>
+                <div class="pm-task-table-cell task-donedate">
+                  {{ task.doneDate }}
+                </div>
+        </li>
+    </ul>
 </div>
